@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity" >
+    <item android:id="@+id/action_setdestination"
+        android:icon="@drawable/ic_path3"
+        android:title="Navigate Here"
+        app:showAsAction="never" />
+    <item android:id="@+id/action_save_landmark"
+        android:icon="@drawable/ic_markerred"
+        android:title="Save landmark as favourite"
+        android:orderInCategory="1"
+        app:showAsAction="ifRoom" />
+    <item android:id="@+id/action_add_new_landmark"
+        android:title="Add a new landmark"
+        android:orderInCategory="2"/>
+
+</menu>

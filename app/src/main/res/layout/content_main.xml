@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/baseLO">
+
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout
+        xmlns:sothree="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/sliding_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        sothree:umanoPanelHeight="120dp"
+        sothree:umanoShadowHeight="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/minimap_fragment">
+            </FrameLayout>
+
+            <LinearLayout android:id="@+id/search_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                android:layout_margin="7dp"
+                android:background="@drawable/shadow_bottom_border">
+
+                <ImageButton android:id="@+id/navOpener"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_dehaze_black_24dp"
+                    android:background="@null"
+                    android:padding="5dp"
+                    android:layout_marginRight="10dp"/>
+
+                <AutoCompleteTextView android:id="@+id/search_field"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="Enter keywords"
+                    android:padding="8dp"
+                    android:singleLine="true"/>
+
+                <ImageView android:id="@+id/search_field_button"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="5dp"
+                    android:src="@drawable/ic_action_search" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true">
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/locateButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:backgroundTint="@color/colorPrimaryDark"
+                    android:src="@drawable/myloca"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginEnd="20dp"/>
+
+                <Button android:id="@+id/locateFromGallery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GALLERY"
+                    android:layout_toLeftOf="@id/locateButton"
+                    android:layout_marginRight="20dp"/>
+
+                <ToggleButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:background="@drawable/round_shape"
+                    android:id="@+id/toggleNavigate"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toLeftOf ="@id/locateFromGallery"
+                    android:clickable="true"
+                    android:visibility="gone"
+                    android:textOff="Start"
+                    android:textOn="Stop"
+                    android:layout_alignParentTop="true"/>
+
+            </RelativeLayout>
+
+            <LinearLayout android:id="@+id/flooro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingEnd="20dp"
+                android:orientation="vertical"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true">
+
+                <LinearLayout android:id="@+id/floorLO"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                </LinearLayout>
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/floors"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:backgroundTint="@color/colorPrimaryDark"
+                    android:src="@drawable/white_floor_plan"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginRight="5dp"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <FrameLayout android:id="@+id/info_frag"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:gravity="center|top"
+            android:background="#ffffff" />
+
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+    <FrameLayout android:id="@+id/error_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="right|top">
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/camera_view_layout"
+        android:visibility="visible"
+        android:layout_gravity="bottom">
+    </FrameLayout>
+
+    <FrameLayout android:id="@+id/new_landmark_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="right|top">
+    </FrameLayout>
+
+    <!--    <Button android:id="@+id/dialogbutton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dialog"
+        android:layout_gravity="center" />-->
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+</FrameLayout>

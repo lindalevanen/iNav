@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="fi.aalto.tshalaa1.inav.StartingActivity"
+    android:background="@color/bg_color">
+
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout
+        xmlns:sothree="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/no_connection"
+        android:gravity="bottom"
+        sothree:umanoPanelHeight="60dp"
+        sothree:umanoShadowHeight="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/banner"
+                android:src="@drawable/bg"
+                android:layout_alignParentEnd="true"
+                android:scaleType="centerCrop"
+                android:adjustViewBounds="true"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/logo"
+                android:clickable="true"
+                android:layout_alignBottom="@+id/banner"
+                android:src="@drawable/indoor_photo_icon"
+                android:layout_centerHorizontal="true"
+                android:adjustViewBounds="true"
+                android:layout_marginBottom="37dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="30dp"
+                android:paddingTop="30dp"
+                android:text="Choose location."
+                android:textSize="20sp"
+                android:id="@+id/chooseLocation"
+                android:layout_below="@id/banner"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"/>
+
+            <ProgressBar
+                android:id="@+id/progressBarS"
+                style="?android:attr/progressBarStyleLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/chooseLocation"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"/>
+
+            <ListView
+                android:id="@+id/building_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_below="@id/chooseLocation"
+                android:layout_centerHorizontal="true">
+            </ListView>
+
+        </RelativeLayout>
+
+        <RelativeLayout android:id="@+id/no_connection_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="20dp"
+            android:gravity="top"
+            android:background="#cb4d4d">   <!-- TODO: set a drawable bg or a nice red or nothing and set it in layout -->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:text="No internet connection."/>
+
+            <TextView android:id="@+id/retry_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_alignParentEnd="true"
+                android:clickable="true"
+                android:textColor="#ffffff"
+                android:text="RETRY"
+                android:textSize="14sp"/>
+
+        </RelativeLayout>
+
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+</RelativeLayout>

@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/RL"
+    android:background="#ffffff"
+    android:clickable="true">
+
+    <!-- THE MAIN CONTENT -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="52dp"
+        android:paddingTop="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="-7dp"
+            android:paddingTop="15dp"
+            android:paddingRight="15dp"
+            android:paddingLeft="25dp"
+            android:paddingBottom="20dp">
+
+            <TextView android:id="@+id/name_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="20dp"
+                android:text="Name"/>
+            <!--marginStart = 60dp-->
+
+            <EditText android:id="@+id/lm_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginEnd="8dp"
+                android:singleLine="true"
+                android:inputType="textCapSentences"
+                android:visibility="visible"
+                android:hint="Landmark name"
+                android:textColorHint="#A6A6A6"
+                />
+            <!-- android:layout_marginStart="56dp"-->
+
+            <TextView android:id="@+id/name_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FF0000"
+                android:textSize="12sp"
+                android:text="Enter a valid name"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="-2dp"
+                android:visibility="gone"/>
+
+            <TextView android:id="@+id/description_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="20dp"
+                android:text="Description"/>
+
+            <EditText android:id="@+id/lm_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginEnd="8dp"
+                android:inputType="textMultiLine|textCapSentences"
+                android:visibility="visible"
+                android:hint="Landmark description"
+                android:textColorHint="#A6A6A6"/>
+
+            <TextView android:id="@+id/type_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="4dp"
+                android:textSize="12sp"
+                android:text="Type*"/>
+
+            <Spinner android:id="@+id/type_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+            </Spinner>
+
+            <TextView android:id="@+id/type_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FF0000"
+                android:textSize="12sp"
+                android:text="Select a type"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"/>
+
+            <!--<LinearLayout android:id="@+id/other_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="What other?"
+                    android:layout_marginEnd="10dp"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>-->
+
+            <TextView android:id="@+id/location_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="30dp"
+                android:textSize="12sp"
+                android:text="Location*"/>
+
+            <ImageView android:id="@+id/lm_location"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/bg"
+                android:scaleType="centerCrop"/>
+
+            <TextView android:id="@+id/photo_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_marginStart="4dp"
+                android:textSize="12sp"
+                android:text="Photo*"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="8dp">
+
+                <ImageView android:id="@+id/lm_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/photo_bg"
+                    android:scaleType="centerCrop"/>
+
+                <ImageView android:id="@+id/plus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_action_photo"
+                    android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+
+            <TextView android:id="@+id/photo_error"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FF0000"
+                android:textSize="12sp"
+                android:text="Take a photo of the landmark"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="6dp"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- ACTIONBAR -->
+
+    <RelativeLayout android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:background="@drawable/shadow_bottom_border_turquoise"
+        android:layout_alignParentTop="true"
+        android:paddingBottom="7dp">
+
+        <ImageButton android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_clear_black_24dp"
+            android:background="@null"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_toRightOf="@id/back_button"
+            android:textStyle="bold"
+            android:layout_marginStart="5dp"
+            android:textColor="#ffffff"
+            android:text="Create a new landmark"
+            android:layout_centerVertical="true"/>
+
+        <ImageButton android:id="@+id/send_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_send_black_24dp"
+            android:background="@null"/>
+
+    </RelativeLayout>
+
+    <!-- PROGRESSBAR VIEW -->
+
+    <RelativeLayout android:id="@+id/progressView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <!-- THE LAYOUT WHERE THE LANDMARK LOCATION EDIT WILL BE PLACED -->
+
+    <FrameLayout android:id="@+id/new_minimap_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+
+</RelativeLayout>

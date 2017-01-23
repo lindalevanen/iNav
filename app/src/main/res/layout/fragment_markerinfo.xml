@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/root_fragmentinfo"
+    android:background="@drawable/shadow_top_border">
+    
+    <RelativeLayout android:id="@+id/markerInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/button_navigate"
+            android:layout_marginEnd="15dp">
+
+            <LinearLayout android:id="@+id/topstuff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Maailman isoin"
+                    android:ellipsize="end"
+                    android:layout_marginRight="40dp"
+                    android:maxLines="1"
+                    android:textSize="20sp"
+                    android:paddingBottom="10dp"/>
+
+                <ImageButton android:id="@+id/button_favorite"
+                    android:tag="1"
+                    android:layout_toRightOf="@id/title"
+                    android:layout_width="25dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_heart3"
+                    android:layout_marginLeft="-30dp"
+                    android:padding="2dp"
+                    android:background="@null"
+                    />
+
+            </LinearLayout>
+
+
+
+            <TextView android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/topstuff"
+                android:minLines="1"
+                android:maxLines="3"
+                android:breakStrategy="simple"
+                android:textSize="13sp"
+                android:textColor="#9c9c9c"
+                android:text="Lorem ipsum lallala testing the description. nskgöokmga a ang oanoandog ao aeodng aoen goin obn  oergoiarngpoiu a."
+                />
+
+        </RelativeLayout>
+
+        <ImageButton android:id="@+id/button_navigate"
+            android:tag="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_path3"
+            android:padding="15dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="2dp"
+            android:background="@null"/>
+
+    </RelativeLayout>
+
+    <LinearLayout android:id="@+id/e_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:baselineAligned="false">
+
+        <RelativeLayout android:id="@+id/errorLO"
+            android:tag="3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="15dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@null">
+
+            <ImageView android:id="@+id/error_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_error_black_24dp"
+                android:layout_centerHorizontal="true"
+                android:background="@null"/>
+
+            <TextView android:id="@+id/error_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:textColor="#9c9c9c"
+                android:text="Report error"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout android:id="@+id/editLO"
+            android:tag="4"
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="30dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@null">
+
+            <ImageView android:id="@+id/edit_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_mode_edit_black_24dp"
+                android:layout_centerHorizontal="true"
+                android:background="@null"/>
+
+            <TextView android:id="@+id/edit_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:textColor="#9c9c9c"
+                android:text="Edit landmark"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

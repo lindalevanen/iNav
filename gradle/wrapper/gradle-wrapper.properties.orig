@@ -1,0 +1,14 @@
+<<<<<<< HEAD
+#Thu Jun 16 12:22:38 EEST 2016
+=======
+#Mon Dec 28 10:00:20 PST 2015
+>>>>>>> df710334226520b2f923b0ffaccbc01e5ebf991e
+distributionBase=GRADLE_USER_HOME
+distributionPath=wrapper/dists
+zipStoreBase=GRADLE_USER_HOME
+zipStorePath=wrapper/dists
+<<<<<<< HEAD
+distributionUrl=https\://services.gradle.org/distributions/gradle-2.4-all.zip
+=======
+distributionUrl=https\://services.gradle.org/distributions/gradle-2.10-all.zip
+>>>>>>> df710334226520b2f923b0ffaccbc01e5ebf991e

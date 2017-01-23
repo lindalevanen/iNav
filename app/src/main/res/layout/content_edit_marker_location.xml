@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="fi.aalto.tshalaa1.inav.MinimapFragment"
+    android:id="@+id/edit_marker_LO"
+    android:background="#f5f5f5">
+
+    <fi.aalto.tshalaa1.inav.MinimapView
+        android:id="@+id/image_minimap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <Button android:id="@+id/finishB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Finish"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="15dp"/>
+
+    <Button android:id="@+id/cancelB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="15dp"/>
+
+
+</RelativeLayout>
